@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#0e7358" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="投资日课">
+<meta name="description" content="每天 5 分钟，一张投资知识卡加三道题。">
+<title>投资日课 · 每天 5 分钟</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/app.css">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <div class="brand">投资日课 <small id="brandSub">30 天打地基</small></div>
+  <div class="pill" id="streakPill">🔥 连续 <b>0</b> 天</div>
+</header>
+
+<main id="view"></main>
+
+<nav class="tabbar" id="tabbar">
+  <button class="tab active" data-tab="today">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M8 4v16"/><path d="M12 9h4M12 13h4"/></svg>
+    <span>今日</span>
+  </button>
+  <button class="tab" data-tab="review">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg>
+    <span>复习</span>
+    <i class="badge" id="badge" hidden></i>
+  </button>
+  <button class="tab" data-tab="progress">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+    <span>进度</span>
+  </button>
+</nav>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="overlay-head">
+    <button class="icon-btn" id="ovClose" aria-label="关闭">✕</button>
+    <div class="title" id="ovTitle"></div>
+    <div style="width:38px"></div>
+  </div>
+  <div class="overlay-body" id="ovBody"></div>
+  <div class="overlay-foot" id="ovFoot" hidden><div class="inner" id="ovFootInner"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="data/week1.js"></script>
+<script src="data/week2.js"></script>
+<script src="data/week3.js"></script>
+<script src="data/week4.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
